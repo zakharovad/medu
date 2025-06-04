@@ -1,0 +1,21 @@
+[Unit]
+Description=Joystick gripper Service
+#After=graphical.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/itkomi/
+#Type=notify
+#Restart=on-failure
+ExecStart=/opt/itkomi/start_gripper.sh
+#ExecStart=/bin/bash -c "source /opt/ros/jazzy/setup.bash; source /opt/itkomi/install/setup.bash; /opt/itkomi/install/joystick_pubsub/lib/joystick_pubsub/it_joystick --ros-args -r __node:=gripper -r __ns:=/it_joystick"
+#Environment="ROS_DISTRO=jazzy"
+#Environment="DISPLAY=:0"
+#Environment="XAUTHORITY=/home/promobot/.Xauthority"
+User=promobot
+Group=promobot
+#Restart=no-failure
+#NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

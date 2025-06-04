@@ -1,0 +1,7 @@
+launch:
+
+- node:
+    pkg: "joystick_pubsub"
+    exec: "it_joystick"
+    name: "gripper"
+    namespace: "it_joystick"
